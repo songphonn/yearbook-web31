@@ -43,6 +43,7 @@ nav a:hover::after{transform:scaleX(1)}
 .book:hover{transform:rotate(0deg)}
 .book::before{content:'';position:absolute;top:-16px;left:50%;transform:translateX(-50%) rotate(-4deg);width:88px;height:32px;background:repeating-linear-gradient(45deg,var(--accent-deep),var(--accent-deep) 6px,#a081ff 6px,#a081ff 12px);border-radius:3px;box-shadow:0 6px 14px rgba(36,26,61,.25);opacity:.92}
 .book.image-cover{background-color:#2c2148}
+.book.image-cover small,.book.image-cover strong,.book.image-cover span{display:none}
 .book small{font-family:var(--font-mono);letter-spacing:1.5px;font-size:12px;opacity:.9}
 .book strong{font-family:var(--font-display);font-size:72px;font-weight:700;line-height:1}
 .book span{font-family:var(--font-mono);letter-spacing:4px;font-size:12px;opacity:.9}
