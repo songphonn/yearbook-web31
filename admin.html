@@ -1,12 +1,13 @@
+
 <!doctype html>
 <html lang="th">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>จัดการหนังสือรุ่น</title><link rel="stylesheet" href="styles.css"></head>
 <body class="admin-page"><header class="header"><a class="logo" href="index.html">← กลับหน้าเว็บ</a></header><main class="admin-wrap">
-  <section class="login-card" id="loginCard"><p class="eyebrow">OWNER ACCESS</p><h1>เข้าสู่ระบบเจ้าของเว็บ</h1><p>ครั้งแรกให้สร้างรหัสผ่านของคุณ</p><form id="loginForm"><input id="password" type="password" minlength="4" placeholder="รหัสผ่านอย่างน้อย 4 ตัว" required><button>เข้าสู่หน้าจัดการ</button></form></section>
+  <section class="login-card" id="loginCard"><p class="eyebrow">OWNER ACCESS</p><h1>เข้าสู่ระบบเจ้าของเว็บ</h1><p>เข้าสู่ระบบด้วยอีเมลผู้ดูแลที่ตั้งไว้ใน Firebase</p><form id="loginForm"><input id="email" type="email" placeholder="อีเมลผู้ดูแล" required><input id="password" type="password" minlength="6" placeholder="รหัสผ่าน" required><button>เข้าสู่หน้าจัดการ</button></form></section>
   <section id="dashboard" hidden><div class="admin-head"><div><p class="eyebrow">CONTROL CENTER</p><h1>จัดการหนังสือรุ่น</h1></div><button id="logout" class="link-button">ออกจากระบบ</button></div>
     <div class="admin-grid"><form id="siteForm" class="card"><h2>ข้อมูลเว็บไซต์</h2><label>ชื่อโรงเรียน<input name="school" required></label><label>ปี / รุ่น<input name="year" required></label><label>สีหลักของเว็บ<input name="mainColor" type="color"></label><label>หัวข้อหน้าแรก<input name="title" required></label><label>คำอธิบาย<textarea name="heroText" rows="3"></textarea></label><label>ลิงก์รูปปกหนังสือรุ่น<input name="coverImage" type="url" placeholder="https://example.com/cover.jpg"></label><label>หรือเลือกรูปจากเครื่อง<input id="coverFile" type="file" accept="image/*"></label><small class="help">เลือกรูปจากเครื่อง หรือวางลิงก์รูปภาพ หากไม่ใส่ทั้งสองอย่างจะใช้ปกสีส้ม</small><label>ข้อความท้ายเว็บ<input name="footer"></label><button>บันทึกข้อมูล</button></form>
       <div class="card"><h2>เพื่อนในรุ่น</h2><form id="studentForm" class="add-row student-form"><input name="name" placeholder="ชื่อ - นามสกุล" required><input name="detail" placeholder="ชื่อเล่น / ห้อง" required><input name="image" type="url" placeholder="ลิงก์รูปภาพ (ไม่บังคับ)"><input id="studentFile" type="file" accept="image/*"><input name="quote" placeholder="คำคมใต้รูป (ไม่บังคับ)"><button>เพิ่ม</button></form><small class="help">เลือกรูปจากเครื่อง หรือวางลิงก์รูปภาพ · ไฟล์ไม่เกิน 3 MB</small><div id="studentList"></div></div>
       <div class="card"><h2>แกลเลอรี</h2><form id="galleryForm" class="add-row"><input name="caption" placeholder="คำบรรยายรูป" required><input name="image" placeholder="ลิงก์รูปภาพ" required><button>เพิ่ม</button></form><div id="galleryList"></div></div>
     </div>
   </section>
-</main><script src="app.js"></script></body></html>
+</main><script type="module" src="app.js"></script></body></html>
